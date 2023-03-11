@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: extra-light;
+    src: url(/fonts/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(/fonts/Poppins-SemiBold.ttf);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.hiddenicon, .hiddenlogo{
+    display: none;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+}
+
+nav{
+    width: 75%;
+    text-align: right;
+}
+
+nav a{
+    text-decoration: none;
+    margin: 0 1.5rem;
+    color: white;
+    font-size: 16px;
+    font-family: regular;
+    position: relative;
+}
+
+nav a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.static::before{
+    width: 100%;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.icons{
+    width: 15%;
+    text-align: right;
+}
+
+.icons i{
+    padding: 0 1rem;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.number{
+    position: relative;
+}
+
+.number span{
+    position: absolute;
+    top: -40%;
+    right: 10%;
+    font-size: 12px;
+    font-family: medium;
+    padding: 2px;
+    background-color: red;
+    border-radius: 1px;
+}
+
+.icons i:hover{
+    opacity: 0.5;
+}
+
+.page1{
+    background-image: url(https://wallpaperaccess.com/full/2076086.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 18rem 0;
+    height: 100vh;
+}
+
+.page1{
+    position: relative;
+}
+
+.fixed{
+    position: absolute;
+    position: fixed;
+    top: 25%;
+    right: -5%;
+    transition: 0.5s;
+}
+
+.fixed:hover{
+    right: 0;
+}
+
+.fixed1{
+    color: white;
+    background-color: red;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.fixed1 i{
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+.fixed1 span{
+    font-size: 12px;
+    font-family: bold;
+    align-items: center;
+}
+
+.fixed2{
+    color: red;
+    background-color: white;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.fixed2 i{
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+.fixed2 span{
+    font-size: 12px;
+    font-family: bold;
+    padding-right: 4px;
+    align-items: center;
+}
+
+.home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.home h1{
+    font-size: 64px;
+    font-family: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.home p{
+    font-size: 16px;
+    font-family: light;
+    color: white;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.home a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: medium;
+    border: 1px solid white;
+    padding: 15px 30px;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.home span{
+    font-size: 12px;
+    margin-left: 0.6rem;
+    transition: 0.5s;
+}
+
+.home a:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.home a:hover span i{
+    transform: translate(50%);
+}
+
+.container{
+    padding: 0 7rem;
+}
+
+.header{
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+}
+
+.header h1{
+    font-size: 36px;
+    font-family: regular;
+    margin-bottom: 1rem;
+    color: #282828;
+}
+
+.header p{
+    font-size: 18px;
+    font-family: light;
+    color: #737373;
+    width: 60%;
+    margin: auto;
+}
+
+.products{
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .box{
+    width: 30%;
+    cursor: pointer;
+}
+
+.img img{
+    width: 100%;
+    transition: 0.8s;
+}
+
+.img{
+    position: relative;
+    overflow: hidden;
+}
+
+.img:hover img{
+    transform: scale(1.05);
+}
+
+.button{
+    position: absolute;
+    background-color: black;
+    width: 38%;
+    bottom: 15%;
+    left: -38%;
+    transition: 0.5s;
+}
+
+.button button{
+    font-size: 14px;
+    font-family: medium;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.button .first{
+    padding: 6px 8px 6px 10px;
+}
+
+.button .second{
+    padding: 6px 8px 6px 0;
+}
+
+.box .img:hover .button{
+    left: -28%;
+}
+
+.img .button:hover{
+    left: 0!important;
+}
+
+.third{
+    position: absolute;
+    color: white;
+    background-color: black;
+    bottom: 15%;
+    left: -33%;
+    transition: 0.5s;
+    font-size: 14px;
+    font-family: medium;
+    cursor: pointer;
+    padding: 6px 14px;
+}
+
+.box .img:hover .third{
+    left: 0;
+}
+
+.img span{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 12px;
+    font-family: bold;
+}
+
+.box .difference{
+    color: #B4B4B4;
+}
+
+.text{
+    margin-top: 1.5rem;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.text a{
+    font-size: 15px;
+    font-family: medium;
+    color: #282828;
+    transition: 0.5s;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+}
+
+.text a:hover{
+    opacity: 0.5;
+}
+
+.text p{
+    font-family: extra-light;
+    font-size: 14px;
+    color: #282828;
+    cursor: auto;
+}
+
+.text span{
+    color: #939393;
+    text-decoration: line-through;
+    text-decoration-color: #939393;
+    margin-right: 0.5rem;
+}
+
+@media (max-width:576px) {
+    header{
+        display: flex;
+        justify-content: start;
+        position: sticky;
+        top: 0;
+    }
+
+    .container{
+        padding: 0 3rem;
+    }
+
+    .hiddenicon, .hiddenlogo{
+        display: block;
+    }
+
+    .mainlogo, nav, .icons{
+        display: none;
+    }
+
+    .hiddenicon{
+        margin-right: 5rem;
+        transition: 0.5s;
+    }
+
+    .hiddenicon:hover{
+        opacity: 0.5;
+    }
+
+    .hiddenicon i{
+        font-size: 16px;
+        color: #939393;
+    }
+
+    .logo{
+        width: 25%;
+        margin-left: 5rem;
+    }
+
+    .fixed{
+        display: none;
+    }
+
+    .home h1{
+        font-size: 30px;
+    }
+
+    .home p{
+        font-size: 12px;
+    }
+
+    .header h1{
+        font-size: 36px;
+    }
+
+    .header p{
+        font-size: 13px;
+    }
+
+    .products{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .products .box{
+        width: 100%;
+    }
+
+    .text{
+        margin-bottom: 3rem;
+    }
+
+    .end{
+        margin-bottom: 5rem;
+    }
+
+    .button{
+        width: 28%;
+        left: -28%;
+    }
+
+    .box .img:hover .button{
+        left: -20%;
+    }    
+}
